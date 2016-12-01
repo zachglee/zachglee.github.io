@@ -347,12 +347,12 @@ function main() {
 	document.body.appendChild(canvas);
 	
 	//Setting up images
-	candleIconDarkTeamSnuffed.src = "res/images/candleIconDarkTeamSnuffed90x90.jpg";
-	candleIconDarkTeamLit.src = "res/images/candleIconDarkTeamLit90x90.jpg";
-	candleIconLightTeamSnuffed.src = "res/images/candleIconLightTeamSnuffed90x90.jpg";
-	candleIconLightTeamLit.src = "res/images/candleIconLightTeamLit90x90.jpg";
-	candleSelectedBorder.src = "res/images/candleSelectedBorder90x90.png";
-	candleCanMoveSymbol.src = "res/images/candleCanMoveSymbol90x90.png";
+	candleIconDarkTeamSnuffed.src = "zachglee.github.io/Candle Game/res/images/candleIconDarkTeamSnuffed90x90.jpg";
+	candleIconDarkTeamLit.src = "zachglee.github.io/Candle Game/res/images/candleIconDarkTeamLit90x90.jpg";
+	candleIconLightTeamSnuffed.src = "zachglee.github.io/Candle Game/res/images/candleIconLightTeamSnuffed90x90.jpg";
+	candleIconLightTeamLit.src = "zachglee.github.io/Candle Game/res/images/candleIconLightTeamLit90x90.jpg";
+	candleSelectedBorder.src = "zachglee.github.io/Candle Game/res/images/candleSelectedBorder90x90.png";
+	candleCanMoveSymbol.src = "zachglee.github.io/Candle Game/res/images/CandleCanMoveSymbol90x90.png";
 	
 	//Event listener declarations
 	document.addEventListener("click",mouseClickHandler,false);
