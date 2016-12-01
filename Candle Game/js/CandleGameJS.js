@@ -347,7 +347,7 @@ function main() {
 	document.body.appendChild(canvas);
 	
 	//Setting up images
-	candleIconDarkTeamSnuffed.src = "zachglee.github.io/Candle Game/res/images/candleIconDarkTeamSnuffed90x90.jpg";
+	candleIconDarkTeamSnuffed.src = "http://zachglee.github.io/Candle Game/res/images/candleIconDarkTeamSnuffed90x90.jpg";
 	candleIconDarkTeamLit.src = "zachglee.github.io/Candle Game/res/images/candleIconDarkTeamLit90x90.jpg";
 	candleIconLightTeamSnuffed.src = "zachglee.github.io/Candle Game/res/images/candleIconLightTeamSnuffed90x90.jpg";
 	candleIconLightTeamLit.src = "zachglee.github.io/Candle Game/res/images/candleIconLightTeamLit90x90.jpg";
