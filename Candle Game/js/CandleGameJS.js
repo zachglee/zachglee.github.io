@@ -347,12 +347,12 @@ function main() {
 	document.body.appendChild(canvas);
 	
 	//Setting up images
-	candleIconDarkTeamSnuffed.src = "res/images/candleIconDarkTeamSnuffed90x90.jpg";
+	candleIconDarkTeamSnuffed.src = "res/images/CandleIconDarkTeamSnuffed90x90.jpg";
 	alert(candleIconDarkTeamSnuffed.src);
-	candleIconDarkTeamLit.src = "res/images/candleIconDarkTeamLit90x90.jpg";
-	candleIconLightTeamSnuffed.src = "res/images/candleIconLightTeamSnuffed90x90.jpg";
-	candleIconLightTeamLit.src = "res/images/candleIconLightTeamLit90x90.jpg";
-	candleSelectedBorder.src = "res/images/candleSelectedBorder90x90.png";
+	candleIconDarkTeamLit.src = "res/images/CandleIconDarkTeamLit90x90.jpg";
+	candleIconLightTeamSnuffed.src = "res/images/CandleIconLightTeamSnuffed90x90.jpg";
+	candleIconLightTeamLit.src = "res/images/CandleIconLightTeamLit90x90.jpg";
+	candleSelectedBorder.src = "res/images/CandleSelectedBorder90x90.png";
 	candleCanMoveSymbol.src = "res/images/CandleCanMoveSymbol90x90.png";
 	
 	//Event listener declarations
