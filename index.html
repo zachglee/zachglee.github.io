@@ -4,11 +4,12 @@
 <body>
   <input type="button" value="click me" onclick="fun()"></input>
   <a href="Candle Game/CandleGame.html">test link</a>
-  <img src="Candle Game/res/images/CandleIconLightTeamLit90x90.jpg" height="100" width="100"></img>
+  <img src="Candle Game/res/images/CandleIconLightTeamLit90x90.jpg" height="100" width="100" id="testimg"></img>
 </body>
 <script>
 function fun() {
   alert("i was clicked")
+  alert(document.getElementById("testimg").src);
 }
 </script>
 </html>
