@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang = "en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="setFocus()">
+
+<div align="center" class = "pillar heavybeveled">
+	<h1>Grade Calculator</h1>
+	<p>Programmed By Zach Lee</p>
+
+	<div id="scoreCounterArea">
+		<p class="smalltext">Score Count:</p>
+		<p id="scoreCounter" class="mediumtext">0</p>
+	</div>
+
+	<div id="decimalChooserArea">
+		<p class="smalltext">Decimals:</p>
+		<select id="decimalChooser" class="lightbeveled">
+  			<option value="0" selected="selected">0</option>
+  			<option value="1">1</option>
+ 			<option value="2">2</option>
+		</select>
+	</div>
+
+	<div>
+		<input id = "maxScore" class="focusfader lightbeveled" type = "text" placeholder = "Maximum Score" style = "font-size:2em;"></input>
+	</div>
+
+	<div style="height:40vh">
+		<input id = "studentScore" class="focusfader lightbeveled" type = "text" placeholder = "Student's Score" style = "font-size:2em;"></input>
+		<div>
+			<input class="hoverfader lightbeveled defaultmargins smalltext" type="button" onclick="reset()" value="New Group"></input>
+			<input class="hoverfader lightbeveled defaultmargins smalltext" type="button" onclick="undo()" value="Undo"></input>
+			<input id="statsButton" class="hoverfader lightbeveled defaultmargins smalltext" type = "button" onclick = "showStats()" value = "Show Stats"></input>
+			<p id = "results" class = "largetext"></p>
+			<p id = "operation" class="mediumtext">
+			<p id = "average" class="mediumtext"></p>
+			<p id = "highLowScore" class="mediumtext"></p>
+		</div>
+	</div>
+	<p class = "mediumtext">Previous Scores: (Most recent at top)</p>
+	<div id="" style="overflow:auto; height:20vh; width:35vw;">
+		<p class="mediumtext" id="previousScores"></p>
+	</div>
+	<a href="about.html" id="aboutLink">About</a>
+</div>
+
+<script src="js/GradeCalculatorJS.js">
+</script>
+
+</body>
+</html>
