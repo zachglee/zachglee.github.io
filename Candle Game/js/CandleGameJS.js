@@ -348,7 +348,6 @@ function main() {
 	
 	//Setting up images
 	candleIconDarkTeamSnuffed.src = "res/images/CandleIconDarkTeamSnuffed90x90.jpg";
-	alert(candleIconDarkTeamSnuffed.src);
 	candleIconDarkTeamLit.src = "res/images/CandleIconDarkTeamLit90x90.jpg";
 	candleIconLightTeamSnuffed.src = "res/images/CandleIconLightTeamSnuffed90x90.jpg";
 	candleIconLightTeamLit.src = "res/images/CandleIconLightTeamLit90x90.jpg";
