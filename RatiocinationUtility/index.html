@@ -1,0 +1,75 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<!-- <script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script> -->
+	<script src="js/Ratiocinator.js"></script>
+  <script src="js/Chart.bundle.min.js"></script>
+	<script>
+    // -------- U T I L S -------- //
+		String.prototype.regexIndexOf = function(regex, startpos) {
+    		var indexOf = this.substring(startpos || 0).search(regex);
+    		return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
+		}
+
+    function arraysEqual(a, b) {
+      if (a === b) return true;
+      if (a == null || b == null) return false;
+      if (a.length != b.length) return false;
+
+      //TODO sort the arrays here to deal with different orders
+
+      for (var i = 0; i < a.length; ++i) {
+        if (a[i] !== b[i]) return false;
+      }
+      return true;
+    }
+	</script>
+  <script src="js/RatiocinationReportViewer.js"></script>
+  <script src="js/Processors.js"></script>
+  <script src="js/Configuration.js"></script>
+
+  
+  <div class="headerContent">
+    <h1>Ratiocinator</h1>
+    <button onclick="ratiocinate()">GO</button>
+  <div>
+
+</head>
+
+<body>
+  <section>
+    <section class="inputContainer">
+      <div> <textarea id="inputTextbox"></textarea> </div>
+      <canvas id="myChart"></canvas>
+      <!-- this container is not actually needed unless we need to render other stats. Rn Chart.js library handles the rendering of the sentence length distribution stats -->
+      <div class="statsContainer"> <span id="statsContainer"></span> </div>
+    </section>
+    <div class="renderContainer"> <span id="renderContainer">SAMPLE TEXT</span> </div>
+  </section>
+
+	<script>
+    //TODO figure out how to preserve newlines in the textarea so that we can read the rendered text more nicely
+    //TODO custom banned words with defaults
+    //TODO fix the bug where if you use the same sentence twice it can't detect the second one -- AHA what if as we find them we mark their indices down in a blacklist and when we search index-of we don't include things in the blacklist?
+    //TODO BUG -- last sentence of sample gets the period included and it leads to an inaccurate word count
+
+		var SAMPLE_TEXT = "This sentence has five words. Here are five more words. Five-word sentences are fine. But several together become monotonous. Listen to what is happening. The writing is getting boring. The sound of it drones. It’s like a stuck record. The ear demands some variety. Now listen. I vary the sentence length, and I create music. Music. The writing sings. It has a pleasant rhythm, a lilt, a harmony. I use short sentences. And I use sentences of medium length. And sometimes, when I am certain the reader is rested, I will engage him with a sentence of considerable length, a sentence that burns with energy and builds with all the impetus of a crescendo, the roll of the drums, the crash of the cymbals–sounds that say listen to this, it is important."
+
+    function ratiocinate() {
+      var inputText = document.getElementById("inputTextbox").value;
+      var rc = new Ratiocinator(ACTIVE_PROCESSORS);
+      var report = rc.getRatiocinationReport(inputText);
+
+      var textHTML = renderedTextHTML(report);
+      document.getElementById("renderContainer").innerHTML = textHTML;
+
+      var statsHTML = renderedStatsHTML(report);
+      document.getElementById("statsContainer").innerHTML = statsHTML;
+    }
+
+	</script>
+</body>
+
+
+</html>
